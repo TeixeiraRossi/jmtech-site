@@ -7,11 +7,15 @@ export default function Contato() {
   const [email, setEmail] = useState("")
   const [mensagem, setMensagem] = useState("")
   const [loading, setLoading] = useState(false)
+  const [sucesso, setSucesso] = useState(false)
+  const [erro, setErro] = useState(false)
 
   const handleSubmit = async (e: React.SubmitEvent) => {
   e.preventDefault()
 
   setLoading(true)
+  setSucesso(false)
+  setErro(false)
 
   try {
     const response = await fetch("/api/mensagem", {
@@ -28,19 +32,17 @@ export default function Contato() {
 
     const data = await response.json()
 
-    if (!response.ok) {
-      throw new Error(data.error || "Erro ao enviar")
-    }
-
-    alert(data.message)
+    if (!response.ok) throw new Error()
+    setSucesso(true)
+    //alert("Mensagem enviada, Entraremos em contato")
 
     setNome("")
     setEmail("")
     setMensagem("")
   } catch (error) {
-    alert("Erro ao enviar mensagem")
+      setErro(true)
   } finally {
-    setLoading(false)
+      setLoading(false)
   }
 }
 
@@ -118,6 +120,16 @@ export default function Contato() {
             >
               {loading ? "Enviando..." : "Enviar Mensagem"}
             </button>
+              {sucesso && (
+              <p className="text-green-400 mt-4">
+                ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+              </p>
+            )}
+              {erro && (
+              <p className="text-red-400 mt-4">
+                ❌ Ocorreu um erro ao enviar. Tente novamente.
+              </p>
+            )}
 
           </form>
 

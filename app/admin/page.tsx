@@ -50,7 +50,7 @@ export default function AdminPage() {
         ) : (
           <div className="space-y-6">
           {mensagens.map((msg) => {
-          console.log("funciona essa porra:", msg.id, typeof msg.id)
+          console.log("ID:", msg.id, typeof msg.id)
 
           return (
             <div
