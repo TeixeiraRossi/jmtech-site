@@ -21,6 +21,8 @@ export default function AdminPage() {
 
   useEffect(() => {
     fetchMensagens()
+    const interval = setInterval(() => {fetchMensagens()}, 10000)
+    return () => clearInterval(interval)
   }, [])
 
 
@@ -51,6 +53,9 @@ export default function AdminPage() {
         <h1 className="text-4xl font-extrabold mb-10">
           Painel de Mensagens
         </h1>
+        <p className="text-sm text-slate-400 mb-6">
+          Atualizando mensagens automaticamente
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 
