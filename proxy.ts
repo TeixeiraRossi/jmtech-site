@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server"
 
 export function proxy(request: NextRequest) {
   const isAdminRoute = request.nextUrl.pathname.startsWith("/admin")
-  const authCookie = request.cookies.get("admin-auth")
+  const authCookie = request.cookies.get("admin-auth")?.value
 
   if (isAdminRoute && !authCookie) {
     return NextResponse.redirect(new URL("/login", request.url))

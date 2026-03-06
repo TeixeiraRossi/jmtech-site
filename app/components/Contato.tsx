@@ -27,6 +27,7 @@ export default function Contato() {
         nome,
         email,
         mensagem,
+        website: ""
       }),
     })
 
@@ -73,6 +74,11 @@ export default function Contato() {
         <div className="bg-[#0F172A] p-10 rounded-2xl shadow-2xl border border-slate-800">
 
           <form onSubmit={handleSubmit} className="space-y-6">
+              <input 
+                type="text"
+                name="website"
+                style={{display: "none"}} 
+              />  
 
             <div>
               <label className="block mb-2 text-sm text-slate-300">
