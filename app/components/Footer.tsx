@@ -61,8 +61,8 @@ export default function Footer() {
           </h4>
 
           <ul className="space-y-3 text-sm">
-            <li>contato@jmtech.com</li>
-            <li>+55 (00) 0000-0000</li>
+            <li>grupojm@jmtechcorp.com</li>
+            <li>+55 (66) 9665-0375</li>
             <li>Brasil</li>
           </ul>
         </div>

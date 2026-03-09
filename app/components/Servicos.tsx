@@ -15,8 +15,8 @@ export default function Servicos() {
         "Soluções empresariais personalizadas para otimizar processos e aumentar produtividade.",
     },
     {
-      icon: "🚀",
-      titulo: "Consultoria em Tecnologia",
+      icon: "🧠",
+      titulo: "Consultoria em Inteligência Artificial",
       descricao:
         "Estratégias digitais e arquitetura de sistemas para crescimento sustentável.",
     },
