@@ -91,9 +91,9 @@ useEffect(() => {
         </div>
 
         {/* Desktop CTA */}
-        <button className="hidden md:block bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded-lg text-white font-semibold">
+        <a href="https://wa.me/5566996650375?text=Ol%C3%A1%2C%20quero%20solu%C3%A7%C3%B5es%20digitais%20para%20empresas%20modernas." className="hidden md:block bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded-lg text-white font-semibold">
           Fale Conosco
-        </button>
+        </a>
 
         {/* Mobile Button */}
         <button
