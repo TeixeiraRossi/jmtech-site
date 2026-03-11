@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const userAgent = req.headers.get("user-agent") || "unknown"
     const fingerprint = ip + userAgent
 
-    const { nome, email, mensagem, website } = await req.json()
+    const { nome, email, mensagem, website, token } = await req.json()
     await new Promise((resolve) => setTimeout(resolve, 800))
 
     if(website){
@@ -54,6 +54,27 @@ export async function POST(req: Request) {
       { status: 429 }
     )
   }
+
+//verificacao do cloudflare
+    const verify = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${token}`,
+      }
+    )
+
+    const data = await verify.json()
+
+    if (!data.success) {
+      return NextResponse.json(
+        { error: "Falha na verificação anti-bot" },
+        { status: 400 }
+      )
+    }  
 
 
     const novaMensagem = await prisma.mensagem.create({

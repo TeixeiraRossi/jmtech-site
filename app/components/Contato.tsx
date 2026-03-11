@@ -17,6 +17,10 @@ export default function Contato() {
   setSucesso(false)
   setErro(false)
 
+    const token = (document.querySelector(
+    '[name="cf-turnstile-response"]'
+  ) as HTMLInputElement)?.value
+
   try {
     const response = await fetch("/api/mensagem", {
       method: "POST",
@@ -27,7 +31,8 @@ export default function Contato() {
         nome,
         email,
         mensagem,
-        website: ""
+        website: "",
+        token
       }),
     })
 
@@ -118,6 +123,10 @@ export default function Contato() {
                 className="w-full bg-[#0B1120] border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
               />
             </div>
+            <div
+              className="cf-turnstile"
+              data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}>
+            </div>            
 
             <button
               type="submit"
@@ -145,3 +154,9 @@ export default function Contato() {
     </section>
   )
 }
+
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
