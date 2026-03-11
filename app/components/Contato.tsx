@@ -155,8 +155,10 @@ export default function Contato() {
   )
 }
 
-<script
+import Script from "next/script"
+
+<Script
   src="https://challenges.cloudflare.com/turnstile/v0/api.js"
   async
   defer
-></script>
+/>
