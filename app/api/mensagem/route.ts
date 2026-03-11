@@ -7,6 +7,9 @@ export async function POST(req: Request) {
   try {
     const forwarded = req.headers.get("x-forwarded-for")
     const ip = forwarded ? forwarded.split(",")[0] : "unknown"
+    const userAgent = req.headers.get("user-agent") || "unknown"
+    const fingerprint = ip + userAgent
+
     const { nome, email, mensagem, website } = await req.json()
     await new Promise((resolve) => setTimeout(resolve, 800))
 
@@ -37,6 +40,13 @@ export async function POST(req: Request) {
         { status: 400 }
       )
     }
+
+    if (!rateLimit(fingerprint)) {
+      return NextResponse.json(
+        { error: "Muitas tentativas. Aguarde." },
+        { status: 429 }
+      )
+    }    
 
     if (!rateLimit(ip)) {
     return NextResponse.json(
