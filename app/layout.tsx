@@ -1,3 +1,5 @@
+import Script from "next/script"
+
 import "./globals.css"
 import { Inter } from "next/font/google"
 
@@ -20,12 +22,12 @@ export default function RootLayout({
     <html lang="pt-BR" className={inter.variable}>
       <body className="bg-[#0B1120] font-sans antialiased">
         {children}
+
+        <Script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  strategy="afterInteractive"
+/>
       </body>
     </html>
   )
 }
-<script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  async
-  defer
-></script>
