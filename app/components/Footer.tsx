@@ -50,7 +50,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li>Desenvolvimento Web</li>
             <li>Sistemas Corporativos</li>
-            <li>Consultoria em Tecnologia</li>
+            <li>Consultoria em Inteligência Artificial</li>
           </ul>
         </div>
 

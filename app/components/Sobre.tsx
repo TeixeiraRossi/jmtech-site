@@ -33,9 +33,11 @@ export default function Sobre() {
         </div>
 
         {/* Bloco visual */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl h-80 flex items-center justify-center text-white text-3xl font-bold shadow-2xl">
-          JM TECH
-        </div>
+<div 
+  className="rounded-2xl h-80 shadow-2xl bg-center bg-contain bg-no-repeat"
+  style={{ backgroundImage: "url('/jmtech-512.png')", backgroundPosition: "center 50%" }}
+>
+</div>
 
       </div>
     </Reveal>
