@@ -37,9 +37,9 @@ export default function Hero() {
             Nossos Serviços
           </a>
 
-            <button className="border border-slate-600 hover:border-blue-500 hover:text-white transition px-8 py-3 rounded-lg font-semibold text-slate-300">
+            <a href="#sobre" className="border border-slate-600 hover:border-blue-500 hover:text-white transition px-8 py-3 rounded-lg font-semibold text-slate-300">
               Saiba Mais
-            </button>
+            </a>
 
           </div>
 
