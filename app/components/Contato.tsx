@@ -151,7 +151,7 @@ export default function Contato() {
             </p>
 
             <a
-              href="https://wa.me/5566999999999?text=Olá%20vim%20pelo%20site%20da%20JMTech"
+              href="https://wa.me/5566996650375?text=Ol%C3%A1%2C%20quero%20solu%C3%A7%C3%B5es%20digitais%20para%20empresas%20modernas."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-lg text-white font-semibold mt-6"
