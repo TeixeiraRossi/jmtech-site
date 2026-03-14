@@ -10,7 +10,7 @@ export default function Servicos() {
     },
     {
       icon: "📊",
-      titulo: "Sistemas Corporativos",
+      titulo: "Sistemas APPs e Automações",
       descricao:
         "Soluções empresariais personalizadas para otimizar processos e aumentar produtividade.",
     },

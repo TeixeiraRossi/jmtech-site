@@ -145,20 +145,22 @@ export default function Contato() {
                 ❌ Ocorreu um erro ao enviar. Tente novamente.
               </p>
             )}
-
           </form>
+            <p className="text-center text-slate-400 mt-6 mb-2">
+              ou
+            </p>
 
+            <a
+              href="https://wa.me/5566999999999?text=Olá%20vim%20pelo%20site%20da%20JMTech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-lg text-white font-semibold mt-6"
+            >
+              💬 Falar pelo WhatsApp
+            </a>
         </div>
 
       </div>
     </section>
   )
 }
-
-import Script from "next/script"
-
-<Script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  async
-  defer
-/>
