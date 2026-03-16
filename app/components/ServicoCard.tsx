@@ -28,7 +28,7 @@ export default function ServicoCard({
       viewport={{ once: true }}
       className="bg-[#0F172A] p-8 rounded-2xl border border-slate-800 hover:border-blue-500 transition duration-300"
     >
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="flex justify-center text-4xl mb-4">{icon}</div>
 
       <h3 className="text-2xl font-bold mb-4">
         {titulo}
