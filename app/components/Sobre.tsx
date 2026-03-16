@@ -35,7 +35,7 @@ export default function Sobre() {
         {/* Bloco visual */}
 <div className="bg-gradient-to-br from-white to-white rounded-2xl h-80 w-full flex items-center justify-center shadow-2xl overflow-hidden">
   <img 
-    src="/jmtech_landscape_final.jpg" 
+    src="/jmtech-banner-800x400.webp" 
     alt="JM Tech Logo" 
     className="w-full h-full object-cover"
   />
