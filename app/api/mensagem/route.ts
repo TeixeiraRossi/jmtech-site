@@ -5,8 +5,8 @@ import { prisma } from "@/app/lib/prisma"
 import { NextResponse } from "next/server"
 export async function POST(req: Request) {
   try {
-    const forwarded = req.headers.get("x-forwarded-for")
-    const ip = forwarded ? forwarded.split(",")[0] : "unknown"
+    // CF-Connecting-IP é definido pelo Cloudflare e não pode ser forjado pelo cliente
+    const ip = req.headers.get("cf-connecting-ip") || "unknown"
     const userAgent = req.headers.get("user-agent") || "unknown"
     const fingerprint = ip + userAgent
 
@@ -63,7 +63,10 @@ export async function POST(req: Request) {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${token}`,
+        body: new URLSearchParams({
+          secret: process.env.TURNSTILE_SECRET_KEY ?? "",
+          response: token,
+        }).toString(),
       }
     )
 

@@ -2,11 +2,20 @@ export const dynamic = "force-dynamic"
 
 import { prisma } from "@/app/lib/prisma"
 import { NextResponse } from "next/server"
+import { cookies } from "next/headers"
+import { verifySessionToken } from "@/app/lib/auth"
 
 export async function DELETE(
   request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
+  const cookieStore = await cookies()
+  const auth = cookieStore.get("admin-auth")
+
+  if (!auth?.value || !verifySessionToken(auth.value)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  }
+
   try {
     const { id } = await context.params
     const numericId = Number(id)
