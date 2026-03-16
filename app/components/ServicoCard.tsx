@@ -1,9 +1,10 @@
 "use client"
 
+import { ReactNode } from "react"
 import { motion } from "framer-motion"
 
 type ServicoCardProps = {
-  icon: string
+  icon: ReactNode
   titulo: string
   descricao: string
   delay?: number
