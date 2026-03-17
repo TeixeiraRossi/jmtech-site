@@ -5,12 +5,22 @@ export default function Parceiros() {
   const parceiros = [
     {
       nome: "Empresa Parceira 1",
-      logo: "/parceiros/hotel-svgrepo-com.svg",
+      logo: "/parceiros/partner_1.webp",
       link: "https://siteparceiro.com"
     },
     {
       nome: "Empresa Parceira 2",
-      logo: "/parceiros/wallet-svgrepo-com.svg",
+      logo: "/parceiros/partner_2.webp",
+      link: "https://siteparceiro.com"
+    },
+    {
+      nome: "Empresa Parceira 3",
+      logo: "/parceiros/partner_3.webp",
+      link: "https://siteparceiro.com"
+    },
+    {
+      nome: "Empresa Parceira 4",
+      logo: "/parceiros/partner_4.webp",
       link: "https://siteparceiro.com"
     }
   ]
@@ -39,11 +49,11 @@ export default function Parceiros() {
                 className="flex justify-center items-center opacity-70 hover:opacity-100 transition"
               >
                 <Image
-                src={parceiro.logo}
-                alt={parceiro.nome}
-                width={300}
-                height={150}
-                className="object-contain"
+                  src={parceiro.logo}
+                  alt={parceiro.nome}
+                  width={300}
+                  height={150}
+                  className="w-44 h-16 object-contain"
                 />
               </a>
             ))}
