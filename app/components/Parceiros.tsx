@@ -38,7 +38,7 @@ export default function Parceiros() {
             Empresas que confiam e colaboram com nossas soluções.
           </p>
 
-          <div className="flex justify-center items-center gap-16 mt-14 flex-wrap">
+          <div className="flex justify-center items-center gap-10 md:gap-16 lg:gap-20 mt-14 flex-wrap">
 
             {parceiros.map((parceiro) => (
               <a
@@ -46,14 +46,14 @@ export default function Parceiros() {
                 href={parceiro.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex justify-center items-center opacity-70 hover:opacity-100 transition"
+                className="relative flex justify-center items-center w-32 md:w-40 lg:w-48 h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105"
               >
                 <Image
                   src={parceiro.logo}
                   alt={parceiro.nome}
-                  width={400}
-                  height={400}
-                  className="w-96 h-48   object-contain"
+                  fill
+                  sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+                  className="object-contain"
                 />
               </a>
             ))}
