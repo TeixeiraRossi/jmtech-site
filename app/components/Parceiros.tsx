@@ -7,7 +7,7 @@ export default function Parceiros() {
       nome: "Grupo Hintz",
       logo: "/parceiros/partner_1.webp",
       link: "https://siteparceiro.com",
-      descricao: "O Grupo Hintz é um ecossistema de alta performance composto por 18 frentes de negócios focadas em três pilares fundamentais: Educação, Tecnologia e Serviços. Com uma metodologia comprovada de escala e eficiência, já impactamos e aceleramos mais de 1.000 empresas, transformando ideias em operações sólidas e lucrativas. Somos o motor que impulsiona o crescimento através da inovação e da excelência operacional."
+      descricao: "O Grupo Hintz é um ecossistema de alta performance composto por 18 frentes de negócios focadas em três pilares fundamentais: Educação, Tecnologia e Serviços. Com uma metodologia comprovada de escala e eficiência, já impactamos e aceleramos mais de 1.000 empresas, transformando ideias em operações sólidas e lucrativas."
     },
     {
       nome: "Grupo Nortão",
