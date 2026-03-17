@@ -46,13 +46,13 @@ export default function Parceiros() {
                 href={parceiro.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative flex justify-center items-center w-32 md:w-40 lg:w-48 h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105"
+                className="relative flex justify-center items-center w-48 md:w-56 lg:w-72 h-20 md:h-24 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105"
               >
                 <Image
                   src={parceiro.logo}
                   alt={parceiro.nome}
                   fill
-                  sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+                  sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 288px"
                   className="object-contain"
                 />
               </a>
