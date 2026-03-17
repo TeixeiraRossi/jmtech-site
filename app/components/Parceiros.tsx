@@ -53,7 +53,7 @@ export default function Parceiros() {
                   alt={parceiro.nome}
                   width={300}
                   height={150}
-                  className="w-64 h-24 object-contain"
+                  className="w-96 h-48   object-contain"
                 />
               </a>
             ))}
