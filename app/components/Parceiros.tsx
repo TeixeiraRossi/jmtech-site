@@ -6,25 +6,25 @@ export default function Parceiros() {
     {
       nome: "Grupo Hintz",
       logo: "/parceiros/partner_1.webp",
-      link: "https://siteparceiro.com",
+      link: "https://www.instagram.com/grupohintz/",
       descricao: "O Grupo Hintz é um ecossistema de alta performance composto por 18 frentes de negócios focadas em três pilares fundamentais: Educação, Tecnologia e Serviços. Com uma metodologia comprovada de escala e eficiência, já impactamos e aceleramos mais de 1.000 empresas, transformando ideias em operações sólidas e lucrativas."
     },
     {
       nome: "Grupo Nortão",
       logo: "/parceiros/partner_2.webp",
-      link: "https://siteparceiro.com",
+      link: "https://www.instagram.com/gruponortao/",
       descricao: "Grupo Nortão\nPoder Automotivo. Inteligência Digital.\nO Grupo Nortão é referência em força e confiança no setor automotivo, composto por duas empresas líderes na comercialização de seminovos originais e peças para pickups."
     },
     {
       nome: "Dr. Osvaldinei",
       logo: "/parceiros/partner_3.webp",
-      link: "https://siteparceiro.com",
+      link: "https://www.instagram.com/drosvaldineisa/",
       descricao: "Dr.Osvaldinei Saúde Mental, Metabolismo & Inovação Médico Psiquiatra e Advogado, o Dr. Osvaldinei atua na fronteira entre a mente e o corpo. Especialista em protocolos com Mounjaro, ele oferece um acompanhamento exclusivo que une segurança jurídica, equilíbrio emocional e alta performance metabólica."
     },
     {
       nome: "Dr. Osvalmir",
       logo: "/parceiros/partner_4.webp",
-      link: "https://siteparceiro.com",
+      link: "https://www.instagram.com/drosvalmir/",
       descricao: "Dr. Osvalmir Nutrologia & Performance Médico Nutrólogo (RQE 21827) e especialista em Saúde da Família, o Dr. Osvalmir une o rigor científico à visão humanizada para transformar a vida de seus pacientes. Membro da ABRAN e ABESO, sua atuação é focada em saúde, bem-estar e na otimização da performance e estética."
     }
   ]
