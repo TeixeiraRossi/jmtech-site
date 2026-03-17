@@ -51,8 +51,8 @@ export default function Parceiros() {
                 <Image
                   src={parceiro.logo}
                   alt={parceiro.nome}
-                  width={300}
-                  height={150}
+                  width={400}
+                  height={400}
                   className="w-96 h-48   object-contain"
                 />
               </a>
